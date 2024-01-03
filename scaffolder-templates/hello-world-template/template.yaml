@@ -1,0 +1,35 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: my-first-template
+  title: Hello World
+  description: A simple Hello World example.
+spec:
+  owner: rhdh
+  type: service
+  
+  parameters:
+    - title: Enter the name you'd like to greet.
+      required:
+        - name
+      properties:
+        name:
+          type: string
+          default: World
+    - title: Input the name of the greeter.
+      required:
+        - greeter
+      properties:
+        greeter:
+          type: string
+          default: RHDH     
+  
+  steps:
+    - id: log-message
+      name: Log Message
+      action: debug:log
+      input:
+        message: 'Hello, ${{ parameters.name }} from ${{ parameters.greeter }}!'
+  
+  output:
+    message: 'The parameters you provided are: ${{ parameters.name }} and ${{ parameters.greeter }}'
