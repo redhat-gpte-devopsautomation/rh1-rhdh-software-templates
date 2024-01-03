@@ -3,7 +3,10 @@ kind: Template
 metadata:
   name: add-component-template
   title: Onboard your component to RHDH
-  description: Create and register a new component to RHDH Catalog 
+  description: Create and register a new component to RHDH Catalog
+  tags:
+    - bonus
+    - rhone
 spec:
   owner: rhdh
   type: service

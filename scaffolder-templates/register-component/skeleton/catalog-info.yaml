@@ -8,7 +8,7 @@ metadata:
   annotations:
     gitlab.com/project-slug: ${{values.destination}}
   tags:
-    - Red Hat One
+    - rhone
 spec:
   type: service
   lifecycle: production
